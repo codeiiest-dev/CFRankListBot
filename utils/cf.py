@@ -5,7 +5,7 @@ URL = "https://codeforces.com/api/contest.standings?contestId=CONTEST_ID&handles
 
 def format_name(name, handle):
     fname, lname = name.split(' ', 1)
-    return fname + ' ' + handle + ' ' + lname
+    return '{fname} <a href="https://codeforces.com/profile/{handle}">{handle}</a> {lname}'.format(fname=fname, handle=handle, lname=lname)
 
 
 def get_contest_data(contest_id, handles_str):
