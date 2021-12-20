@@ -31,3 +31,7 @@ Gets the ranklist for the particular contest.
 pip install -r requirements.txt # to install dependencies
 python3 bot.py
 ```
+
+## Deplopy
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/codeiiest-dev/CFRankListBot)

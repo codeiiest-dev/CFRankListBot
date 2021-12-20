@@ -1,0 +1,14 @@
+{
+    "name": "CFRankListBot",
+    "description": "A bot that displays the top ranks for a Codeforces contest",
+    "repository": "https://github.com/codeiiest-dev/CFRankListBot",
+    "keywords": [
+      "telegram-bot",
+      "python"
+    ],
+    "env": {
+      "TOKEN": {
+        "description": "The API key for the bot recevied during App registration"
+      }
+    }
+  }
