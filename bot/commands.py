@@ -9,13 +9,8 @@ BOT = None
 
 def help(update, context):
     """Send a message when the command /help is issued."""
-    update.message.reply_text('Help!')
-
-
-def echo(update, context):
-    """Echo the user message."""
-    logger.info('Received message: %s', update.message.text)
-    update.message.reply_text(update.message.text)
+    update.message.reply_text(
+        'To get the latest CF ranking list, use the command /getrank')
 
 
 def getrank(update, context):
