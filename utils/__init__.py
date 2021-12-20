@@ -658,6 +658,11 @@ RAW_DATA = [
         "name": "Anurag Banerjee",
         "year": 2025,
         "handle": "anurag_8b",
+    },
+    {
+        "name": "Raushan Singh",
+        "year": 2024,
+        "handle": "raushnn"
     }
 ]
 
