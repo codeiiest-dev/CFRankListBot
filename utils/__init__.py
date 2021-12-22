@@ -745,7 +745,7 @@ RAW_DATA = [
     {
         "name": "Raushan Singh",
         "year": 2024,
-        "handle": "raushnn"
+        "handle": "raushnn",
         "gender": "male",
     }
 ]
