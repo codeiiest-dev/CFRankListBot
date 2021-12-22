@@ -37,8 +37,7 @@ def filter_top_participants(contest_data, participants_info):
         elif participants_info[handle]['year'] == 2024:
             top2ndYear.append(format_name(
                 participants_info[handle]['name'], handle))
-     for participant in participants:
-        handle = participant['party']['members'][0]['handle']
+
         if participants_info[handle]['gender']== "female":
             topFemales.append(format_name(
                 participants_info[handle]['name'], handle))
