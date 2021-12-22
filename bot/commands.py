@@ -41,6 +41,10 @@ def getrank(update, context):
         if not len(result['top1stYear']) == 0:
             text += '\n\n<b>Top 3 Participants (1st Year):</b> \n{}'.format(
                 '\n'.join(result['top1stYear']))
+            
+        if not len(result['topFemales']) == 0:
+            text += '\n\n<b>Top 3 Participants (Females):</b> \n{}'.format(
+                '\n'.join(result['topFemales']))
 
     else:
         logger.error('Error: in fetching %s', contest_data['comment'])

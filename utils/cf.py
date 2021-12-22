@@ -38,6 +38,11 @@ def filter_top_participants(contest_data, participants_info):
             top2ndYear.append(format_name(
                 participants_info[handle]['name'], handle))
 
+        if participants_info[handle]['gender']== "female":
+            topFemales.append(format_name(
+                participants_info[handle]['name'], handle))
+        
+
     return {
         'overall': overall,
         'top2ndYear': top2ndYear[:3],
