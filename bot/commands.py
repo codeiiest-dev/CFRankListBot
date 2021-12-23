@@ -2,9 +2,24 @@ from telegram.ext import Updater, CommandHandler, MessageHandler
 from telegram import Bot, ParseMode
 from utils import cf, HANDLES_LIST, DATA
 import logging
+import os
+from functools import wraps
 
 logger = logging.getLogger(__name__)
 BOT = None
+
+LIST_OF_ADMINS = [int(id) for id in os.environ.get('ADMIN_ID').split(',')]
+
+
+def restricted(func):
+    @wraps(func)
+    def wrapped(update, context, *args, **kwargs):
+        user_id = update.effective_user.id
+        if user_id not in LIST_OF_ADMINS:
+            print("Unauthorized access denied for {}.".format(user_id))
+            return
+        return func(update, context, *args, **kwargs)
+    return wrapped
 
 
 def help(update, context):
@@ -13,6 +28,7 @@ def help(update, context):
         'To get the latest CF ranking list, use the command /getrank')
 
 
+@restricted
 def getrank(update, context):
     """Fetch the latest CF rounds ranking list."""
 
@@ -41,7 +57,7 @@ def getrank(update, context):
         if not len(result['top1stYear']) == 0:
             text += '\n\n<b>Top 3 Participants (1st Year):</b> \n{}'.format(
                 '\n'.join(result['top1stYear']))
-            
+
         if not len(result['topFemales']) == 0:
             text += '\n\n<b>Top 3 Participants (Females):</b> \n{}'.format(
                 '\n'.join(result['topFemales']))

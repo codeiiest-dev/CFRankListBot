@@ -9,6 +9,9 @@
     "env": {
       "TOKEN": {
         "description": "The API key for the bot recevied during App registration"
+      },
+      "ADMIN_ID": {
+        "description": "The IDs of the admins who has access to the bot (separated by comma)"
       }
     }
   }
