@@ -1,5 +1,11 @@
 RAW_DATA = [
     {
+        "name": "Rajdeep Majumder",
+        "year": 2024,
+        "handle": "rajdeep321",
+        "gender": "male",
+    },
+    {
         "name": "Iman Kalyan Majumder",
         "year": 2024,
         "handle": "IKMajumder",
